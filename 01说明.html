@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>视频播放实现说明</title>
+		<style type="text/css">
+			div.box {
+				width: 80%;
+				margin: 100px auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box">
+			<p>
+				在HTML中播放视频的方法有很多。</br>
+				在 HTML 中播放视频并不容易！</br>
+				您需要谙熟大量技巧，以确保您的视频文件在所有浏览器中（Internet Explorer, Chrome, Firefox, Safari, Opera）和所有硬件上（PC, Mac , iPad, iPhone）都能够播放。
+				<h3>方法1：使用  embed 标签</h3>
+				<p>
+					embed HTML 页面中嵌入多媒体元素。可以用来显示嵌入网页的 Flash 视频
+				</p>
+				<p>
+					问题</br>
+					HTML4 无法识别 embed 标签。您的页面无法通过验证。</br>
+					如果浏览器不支持 Flash，那么视频将无法播放</br>
+					iPad 和 iPhone 不能显示 Flash 视频。</br>
+					如果您将视频转换为其他格式，那么它仍然不能在所有浏览器中播放。</br>
+				</p>
+				<h3>方法2：使用 object 标签</h3>
+				<p>
+					object 标签的作用是在 HTML 页面中嵌入多媒体元素。可以显示嵌入网页的一段 Flash 视频
+				</p>
+				<p>
+					问题:</br>
+					如果浏览器不支持 Flash，将无法播放视频。</br>
+					iPad 和 iPhone 不能显示 Flash 视频。</br>
+					如果您将视频转换为其他格式，那么它仍然不能在所有浏览器中播放。</br>
+				</p>
+				<h3>方法3：使用 HTML5 video 元素</h3>
+				<p>
+					HTML5 video 标签定义了一个视频或者影片.video 元素在所有现代浏览器中都支持。可以用来显示嵌入网页的 ogg、mp4 或 webm 等格式的视频
+				</p>
+				<p>
+					问题:</br>
+					必须把视频转换为很多不同的格式。</br>
+					video 元素在老式浏览器中无效。</br>
+				</p>
+				<h2>方法3：最好的 HTML 解决方法</h2>
+				<p>
+					HTML 5 video 元素会尝试播放以 mp4、ogg 或 webm 格式中的一种来播放视频。如果均失败，则回退到 embed 元素。
+				</p>
+				<p>
+					问题:</br>
+					必须把视频转换为很多不同的格式。
+				</p>
+				<h3>方法4：优酷解决办法</h3>
+				<p>
+					先将视频上传到优酷网站，然后src更改为优酷视频地址即可
+				</p>
+				<h3>方法5：超链接</h3>
+				<p>
+					如果网页包含指向媒体文件的超链接，大多数浏览器会使用"辅助应用程序"来播放文件。 以下代码片段显示指向 AVI 文件的链接。如果用户点击该链接，浏览器会启动"辅助应用程序"，比如 Windows Media Player 来播放这个 AVI 文件：
+				</p>
+				<code><a href="src/intro.swf">Play a video file</a></code>
+				<h3>内联视频的使用说明</h3>
+				<p>
+					当视频被包含在网页中时，它被称为内联视频。 如果您打算在 web 应用程序中使用内联视频，您需要意识到很多人都觉得内联视频令人恼火。 同时请注意，用户可能已经关闭了浏览器中的内联视频选项。 我们最好的建议是只在用户希望看到内联视频的地方包含它们。一个正面的例子是，在用户需要看到视频并点击某个链接时，会打开页面然后播放视频。
+				</p>
+
+			</p>
+		</div>
+
+	</body>
+
+</html>
