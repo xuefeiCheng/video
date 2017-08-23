@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<title>视频</title>
 		<style type="text/css">
-			div.box{
+			div.box {
 				width: 30%;
 				margin: 100px auto;
 			}
@@ -15,9 +15,35 @@
 	<body>
 		<div class="box">
 			<h3>使用 embed标签</h3>
-			<p><embed> 标签的作用是在 HTML 页面中嵌入多媒体元素。</p>
+			<p>embed 标签的作用是在 HTML 页面中嵌入多媒体元素。</p>
 			<p>下面的 HTML 代码显示嵌入网页的 Flash 视频：</p>
 			<embed src="src/intro.swf" height="200" width="200">
+			<p>如果你无法看到该视频,那么可能你的电脑不支持该文件格式。</p>
+
+			<h3>使用 object标签</h3>
+			<p>object 标签的作用是在 HTML 页面中嵌入多媒体元素。</p>
+			<p>下面的 HTML 代码显示嵌入网页的 Flash 视频：</p>
+			<object height="200" width="200" data="src/intro.swf"></object>
+			<p>如果你无法看到该视频,那么可能你的电脑不支持该文件格式。</p>
+
+			<h3>使用 HTML5 video 元素</h3>
+			<p>HTML5 video 标签定义了一个视频或者影片.video 元素在所有现代浏览器中都支持。</p>
+			<video width="320" height="240" controls>
+				<source src="src/movie.mp4" type="video/mp4">
+				<source src="src/movie.ogg" type="video/ogg"> 您的浏览器不支持 video 标签。
+			</video>
+			<p>如果你无法看到该视频,那么可能你的电脑不支持该文件格式。</p>
+
+			<h3>最好的 HTML 解决方法</h3>
+			<p>以下实例中使用了 4 中不同的视频格式。HTML 5 video 元素会尝试播放以 mp4、ogg 或 webm 格式中的一种来播放视频。如果均失败，则回退到 embed 元素。</p>
+			<video width="320" height="240" controls>
+				<source src="src/movie.mp4" type="video/mp4">
+				<source src="src/movie.ogg" type="video/ogg">
+				<!--<source src="movie.webm" type="video/webm">-->
+				<object data="src/movie.mp4" width="320" height="240">
+    				<embed src="src/movie.swf" width="320" height="240">
+  				</object>
+			</video>
 			<p>如果你无法看到该视频,那么可能你的电脑不支持该文件格式。</p>
 		</div>
 
